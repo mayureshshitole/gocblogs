@@ -1,7 +1,8 @@
 import  Layout  from "../Components/Layout";
 import React, { useState, useEffect } from "react";
-import "../styles/globals.css";
+//import "../styles/globals.css";
 import Head from "next/head";
+import 'tailwindcss/tailwind.css'
 
 function MyApp({ Component, pageProps }) {
   return (
