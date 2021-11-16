@@ -1,19 +1,19 @@
 module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+    ],
+  },
   mode: "jit",
+
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [
-    ''./public/**/*.html',
-    ''./components/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      "bluish":"#09152E"
-    },
     animation: {
       none: "none",
       spin: "spin 1s linear infinite",
@@ -83,6 +83,9 @@ module.exports = {
     extend: {
       fontFamily: {
         nunito: ["nunito", "sans-serif"],
+      },
+      colors: {
+        bluish: "#09152E",
       },
     },
   },

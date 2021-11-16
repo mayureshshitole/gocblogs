@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 
 const Postdetails = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -45,7 +46,8 @@ const Postdetails = ({ post }) => {
         );
       case "image":
         return (
-          <img
+          <Image
+            layout="intrinsic"
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -60,20 +62,23 @@ const Postdetails = ({ post }) => {
   return (
     <>
       <div className="max-w-6xl mx-auto">
-        <header className="flex flex-col items-center px-4">
+        <header className="flex flex-col justify-center items-center px-4">
           <h1 className="mt-5 text-3xl md:text-5xl font-bold md:font-extrabold tracking-tight ">
             {post.title}
           </h1>
           <hr className="mt-4 md:mt-6 border-t-4 w-full mx-auto" />
         </header>
-        <div className="p-2 w-full">
-          <img
+        <div className="p-2 w-full mx-auto flex flex-col justify-center items-center">
+          <Image
+            width={900}
+            height={400}
+            layout="intrinsic"
             src={post.featuredimage.url}
             alt={post.title}
-            className="rounded-lg align-middle items-center mx-auto object-fill sm:w-3/5 shadow-xl"
+            className="rounded-lg  mx-auto object-fill md:w-3/5 shadow-xl"
           />
         </div>
-        <article className=" prose-lg prose-blue mx-auto md:prose-xl lg:prose-2xl overflow-y-hidden p-5">
+        <article className=" prose-lg prose-blue mx-auto md:prose-xl lg:prose-xl overflow-y-hidden p-5">
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) =>
               getContentFragment(itemindex, item.text, item)

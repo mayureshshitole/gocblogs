@@ -1,18 +1,24 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
+import Image from "next/image";
 
 const PostCard = ({ post }) => {
   return (
-    <Link   href={`/blogs/${post.slug}`}>
+    <Link passHref href={`/blogs/${post.slug}`}>
       <div className="bg-white shadow-md rounded-lg p-2 ">
-        <article className="relative overflow-hidden flex flex-row md:flex-col  items-center space-x-3 sm:space-x-0 md:h-72">
-          <img
-            src={post.featuredimage.url}
-            alt={post.title}
-            className="object-fill w-28 h-20 md:w-full md:h-32 shadow-md rounded-md md:rounded-lg "
-          />
-          <div className="md:m-2 flex flex-col justify-between">
+        <article className="relative overflow-hidden flex flex-row md:flex-col items-center space-x-3 sm:space-x-0 md:h-72">
+          <div className="relative object-contain w-28 h-20 md:w-full md:h-32 shadow-md rounded-md md:rounded-lg ">
+            <Image
+              // width={450}
+              // height={450}
+              layout="fill"
+              src={post.featuredimage.url}
+              alt={post.title}
+              className="object-fill shadow-md rounded-md md:rounded-lg "
+            />
+          </div>
+          <div className="md:m-2 flex flex-col justify-between w-full">
             <div>
               <h1 className="font-semibold text-sm  sm:text-lg cursor-pointer hover:text-blue-500 transform transition duration-500 ease-in-out first-letter:text-2xl first-letter:text-blue-500 first-letter:italic">
                 {post.title}
@@ -24,7 +30,7 @@ const PostCard = ({ post }) => {
               </div>
             </div>
             <div className="flex justify-between mt-2 items-center">
-              <Link   href={`/categories/${post.categories[0].slug}`}>
+              <Link passHref href={`/categories/${post.categories[0].slug}`}>
                 <h3 className=" text-xs sm:text-sm text-blue-500 uppercase cursor-pointer hover:text-green-300 transform transition duration-600 ease-in-out rounded-full ">
                   {post.categories[0].name}
                 </h3>
