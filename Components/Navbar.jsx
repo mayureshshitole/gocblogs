@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-[#09152E] p-2 font-nunito shadow-lg rounded-b-lg md:rounded-b-xl">
+      <nav className="bg-bluish p-2 font-nunito shadow-lg rounded-b-lg md:rounded-b-xl">
         <div className=" md:max-w-7xl mx-auto flex  justify-between items-center ">
           <Link href="/">
             <div className="flex justify-center items-center space-x-2 ">
@@ -90,7 +90,7 @@ const Navbar = () => {
         </div>
       </nav>
       {toggle && (
-        <div className="bg-[#09152E] md:hidden flex justify-center items-center  py-2  transform transition duration-1000 ease-in-out rounded-t-lg">
+        <div className="bg-bluish md:hidden flex justify-center items-center  py-2  transform transition duration-1000 ease-in-out rounded-t-lg">
           <ul className="flex flex-col mx-auto text-blue-400 font-semibold  ">
             <li
               className=" border-b-2 border-b-bluetext-blue-400 w-screen py-2 uppercase "

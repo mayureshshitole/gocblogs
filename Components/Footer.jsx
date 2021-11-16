@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="text-gray-600 body-font">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col md:flex-row">
+      <div className="container px-5 py-8 mx-auto flex items-center flex-col md:flex-row">
         <div className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <img
             src="/logoGOC.png"
@@ -12,7 +12,7 @@ const Footer = () => {
             alt="Logo image for www.gearonlinecolts.com"
           />
         </div>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <p className="text-base text-gray-500 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-200 md:py-2 md:mt-0 mt-4">
           © 2021 GearOnlineColts —
           <a
             href="www.gearonlinecolts.com"
@@ -23,7 +23,7 @@ const Footer = () => {
             @Mantisus Inc.
           </a>
         </p>
-        <p className="text-sm text-blue-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <p className="text-base text-blue-500 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-200 md:py-2 md:mt-0 mt-4">
           <a
             href="mailto:contact@gearonlinecolts.com"
             className="text-gray-600 ml-1"
@@ -33,7 +33,7 @@ const Footer = () => {
             contact@gearonlinecolts.com
           </a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="inline-flex md:ml-auto md:mt-0 mt-4 justify-center md:justify-start">
           <a
             className="text-gray-500"
             href="https://www.instagram.com/gearonlinecolts/"
