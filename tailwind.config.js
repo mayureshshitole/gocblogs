@@ -1,15 +1,10 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: [
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
-    ],
-  },
-    future: {
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
+  mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     animation: {
