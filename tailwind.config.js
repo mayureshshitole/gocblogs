@@ -6,9 +6,7 @@ module.exports = {
       "./components/**/*.{js,ts,jsx,tsx}",
     ],
   },
-  mode: "jit",
-
-  future: {
+    future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
